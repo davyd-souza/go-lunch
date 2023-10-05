@@ -43,6 +43,8 @@ body {
 
 h1 {
   font-size: clamp(2rem, 35vw + 1rem, 80rem);
+
+  user-select: none;
 }
 
 a:visited {
