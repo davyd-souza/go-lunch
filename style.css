@@ -3,10 +3,12 @@
 :root {
   --clr-bg: 0 0% 100%;
   --clr-text: 240 5% 7%;
-  
+  --visited-anchor: 263, 69%, 42%;
+
   @media(prefers-color-scheme: dark) {
     --clr-bg: 240 5% 7%;
     --clr-text: 0 0% 100%;
+    --visited-anchor: 255, 92%, 76%;
   }
 }
 
@@ -29,11 +31,20 @@ body {
 
   display: grid;
   place-items: center;
+  grid-template-rows: max-content 1fr;
+  gap: 0.5rem;
 
   padding: 1rem;
 
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   color: hsl(var(--clr-text));
+}
+
+h1 {
   font-size: clamp(2rem, 40vw + 1rem, 80rem);
+}
+
+a:visited {
+  color: hsl(var(--visited-anchor));
 }
